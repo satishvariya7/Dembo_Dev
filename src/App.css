@@ -1,5 +1,10 @@
 .App {
-  text-align: center;
+  background-color: black;
+  background-image: url("./Assets/Landing.png");
+  background-repeat: no-repeat;
+  background-size: 1150px 650px;
+  background-position: center;
+  min-height: 100vh;
 }
 
 .App-logo {
@@ -14,11 +19,11 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color:transparent;
+  min-height: 8vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
