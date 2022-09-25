@@ -18,8 +18,10 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React, { FC } from "react";
-import { Ellipse_Item } from "../../Assets";
-import Header from "../Header/Header";
+import { Ellipse_Item } from "./Assets";
+
+import Header from "./Components/Header/Header";
+
 
 import "./style.css";
 const ConnectWallet: FC = () => {
@@ -35,7 +37,7 @@ const ConnectWallet: FC = () => {
   };
   return (
     <Grid>
-      <Header isLandingScreen={false} />
+      <Header/>
       <Center mt={50} color="white" w={"100%"}>
         <Box
           maxW="sm"

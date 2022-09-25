@@ -3,7 +3,7 @@ import Header from "../../Components/Header/Header";
 import "./style.css";
 const LandingPage: FC = () => {
   return <div className="landing-main">
-    <Header isLandingScreen={}/>
+    <Header isLandingScreen={true}/>
   </div>;
 };
 
