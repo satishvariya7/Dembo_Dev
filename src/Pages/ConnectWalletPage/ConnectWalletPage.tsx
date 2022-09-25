@@ -14,16 +14,17 @@ import {
 import React, { FC } from "react";
 import { Link } from "react-router-dom";
 import { LogoImg } from "../../Assets";
+import ConnectWallet from "../../Components/ConnectWallet/ConnectWallet";
 import Header from "../../Components/Header/Header";
 
 import "./style.css";
-const ConnectWallet: FC = () => {
+const ConnectWalletPage: FC = () => {
   return (
     <Grid>
-      <Header isLandingScreen={false} />
-      <ConnectWallet />
+      <Header isLandingScreen={false} /> 
+      <ConnectWallet/>     
     </Grid>
   );
 };
 
-export default ConnectWallet;
+export default ConnectWalletPage;

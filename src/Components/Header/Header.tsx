@@ -46,7 +46,7 @@ const Header: FC<HeaderProps> = ({ isLandingScreen }) => {
         </ButtonGroup>
       ) : (
         <Button colorScheme="yellow" className="sing-in-btn">
-          Sign in with Lens
+          0xasdasd..cx
         </Button>
       )}
     </Flex>

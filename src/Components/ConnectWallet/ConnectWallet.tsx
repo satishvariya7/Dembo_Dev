@@ -7,8 +7,8 @@ import {
   CloseButton,
   Divider,
   Flex,
-  Grid,  
-  Spacer,  
+  Grid,
+  Spacer,
   Stack,
   Tab,
   TabList,
@@ -35,7 +35,6 @@ const ConnectWallet: FC = () => {
   };
   return (
     <Grid>
-      <Header isLandingScreen={false} />
       <Center mt={50} color="white" w={"100%"}>
         <Box
           maxW="sm"
@@ -88,12 +87,8 @@ const ConnectWallet: FC = () => {
                     key={index}
                   >
                     <Flex color={"black"}>
-                      <Avatar mt="1.5" size='sm' src={Ellipse_Item}/>
-                      <Box ml="3">
-                        <Text fontWeight="bold">
-                          {item}                          
-                        </Text>                        
-                      </Box>
+                      <Avatar size="sm" src={Ellipse_Item} />
+                      <Text ml="2" mt="3px" fontWeight="bold">{item}</Text>
                     </Flex>
                   </Box>
                 ))}
