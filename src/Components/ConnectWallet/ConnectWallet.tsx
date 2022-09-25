@@ -1,8 +1,10 @@
+import { AddIcon } from "@chakra-ui/icons";
 import {
   Avatar,
   Badge,
   Box,
   Button,
+  ButtonGroup,
   Center,
   CloseButton,
   Divider,
@@ -52,12 +54,12 @@ const ConnectWallet: FC = () => {
               <Spacer />
               <CloseButton color={"black"} size="md" />
             </Flex>
-            <Text pt="1px" fontSize="sm" color={"black"}>
+            <Text fontSize="sm" color={"black"}>
               Your Holdings
             </Text>
           </Stack>
-          <Tabs isFitted variant="unstyled" mt="5">
-            <TabList mb="1em">
+          <Tabs isFitted variant="unstyled" mt="2">
+            <TabList>
               <Tab
                 borderRadius={"4"}
                 bgColor={"#E9E9E9"}
@@ -80,17 +82,39 @@ const ConnectWallet: FC = () => {
             <TabPanels>
               <TabPanel>
                 {["BTC", "ETH", "MATIC", "BTC", "BTC"].map((item, index) => (
-                  <Box
+                  <Flex
+                    minWidth="max-content"
+                    alignItems="center"
+                    gap="2"
                     p="10px"
-                    color="white"
+                    mt="2"
+                    color="black"
                     className="token-items"
-                    key={index}
                   >
-                    <Flex color={"black"}>
-                      <Avatar size="sm" src={Ellipse_Item} />
-                      <Text ml="2" mt="3px" fontWeight="bold">{item}</Text>
-                    </Flex>
-                  </Box>
+                    <Box p="2">
+                      <Flex>
+                        <Avatar size="sm" src={Ellipse_Item} />
+                        <Text ml="2" mt="3px" fontWeight="bold">
+                          {item}
+                        </Text>
+                      </Flex>
+                    </Box>
+                    <Spacer />
+                    <Button size={"sm"} bg="black">
+                      <AddIcon color="white" />
+                    </Button>
+                  </Flex>
+                  // <Box
+                  //   p="10px"
+                  //   color="white"
+                  //   className="token-items"
+                  //   key={index}
+                  // >
+                  //   <Flex color={"black"}>
+                  //     <Avatar size="sm" src={Ellipse_Item} />
+                  //     <Text ml="2" mt="3px" fontWeight="bold">{item}</Text>
+                  //   </Flex>
+                  // </Box>
                 ))}
               </TabPanel>
               <TabPanel>
