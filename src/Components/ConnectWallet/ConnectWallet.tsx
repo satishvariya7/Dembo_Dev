@@ -10,6 +10,7 @@ import {
   Divider,
   Flex,
   Grid,
+  Image,
   Spacer,
   Stack,
   Tab,
@@ -20,6 +21,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React, { FC } from "react";
+import { Link } from "react-router-dom";
 import { Ellipse_Item } from "../../Assets";
 import Header from "../Header/Header";
 
@@ -37,7 +39,7 @@ const ConnectWallet: FC = () => {
   };
   return (
     <Grid>
-      <Center mt={50} color="white" w={"100%"}>
+      <Center mt={25} color="white" w={"100%"}>
         <Box
           maxW="sm"
           borderWidth="1px"
@@ -46,7 +48,7 @@ const ConnectWallet: FC = () => {
           w={1000}
           p="5"
         >
-          <Stack spacing={3}>
+          <Stack spacing={2}>
             <Flex>
               <Text pt="5" fontSize="lg" color={"black"}>
                 Join communities
@@ -81,21 +83,32 @@ const ConnectWallet: FC = () => {
             </TabList>
             <TabPanels>
               <TabPanel>
-                {["BTC", "ETH", "MATIC", "BTC", "BTC"].map((item, index) => (
+                {[
+                  { shortName: "BTC", fullName: "Bitcoin" },
+                  { shortName: "ETH", fullName: "Ethereum" },
+                  { shortName: "MATIC", fullName: "Polygon" },
+                  { shortName: "BTC", fullName: "Bitcoin" },
+                  { shortName: "BTC", fullName: "Bitcoin" },
+                ].map((item: any, index) => (
                   <Flex
                     minWidth="max-content"
                     alignItems="center"
                     gap="2"
-                    p="10px"
+                    p="5px"
                     mt="2"
                     color="black"
                     className="token-items"
+                    key={index}
                   >
                     <Box p="2">
-                      <Flex>
+                      <Flex alignItems={"center"}>
                         <Avatar size="sm" src={Ellipse_Item} />
-                        <Text ml="2" mt="3px" fontWeight="bold">
-                          {item}
+                        <Text ml="2" fontWeight="bold">
+                          {item.shortName}
+                        </Text>
+                        <Image ml="2" h="1.5" src={Ellipse_Item} alt="image" />
+                        <Text fontSize="sm" ml="3" color={"black"}>
+                          {item.fullName}
                         </Text>
                       </Flex>
                     </Box>
@@ -104,18 +117,12 @@ const ConnectWallet: FC = () => {
                       <AddIcon color="white" />
                     </Button>
                   </Flex>
-                  // <Box
-                  //   p="10px"
-                  //   color="white"
-                  //   className="token-items"
-                  //   key={index}
-                  // >
-                  //   <Flex color={"black"}>
-                  //     <Avatar size="sm" src={Ellipse_Item} />
-                  //     <Text ml="2" mt="3px" fontWeight="bold">{item}</Text>
-                  //   </Flex>
-                  // </Box>
                 ))}
+                <Link to="/Home">
+                  <Button mt="5" bg={"black"} textAlign={"center"} w="100%">
+                    Done
+                  </Button>
+                </Link>
               </TabPanel>
               <TabPanel>
                 <p>two!</p>

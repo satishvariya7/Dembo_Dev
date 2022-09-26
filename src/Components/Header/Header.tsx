@@ -23,7 +23,7 @@ interface HeaderProps {
 }
 const Header: FC<HeaderProps> = ({ isLandingScreen }) => {
   return (
-    <Flex minWidth="max-content" alignItems="center" gap="2" bg={"black"}>
+    <Flex minWidth="max-content" alignItems="center" gap="2" bg={"black"} p="2">
       <Box p="2">
         <Flex>
           <Box w="20px" h="5" mr="3">
