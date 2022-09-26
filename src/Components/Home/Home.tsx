@@ -1,4 +1,9 @@
-import { AddIcon, ChevronRightIcon } from "@chakra-ui/icons";
+import {
+  AddIcon,
+  ChevronDownIcon,
+  ChevronRightIcon,
+  ChevronUpIcon,
+} from "@chakra-ui/icons";
 import {
   Avatar,
   Badge,
@@ -7,6 +12,7 @@ import {
   ButtonGroup,
   Center,
   CloseButton,
+  Container,
   Divider,
   Flex,
   Grid,
@@ -48,7 +54,7 @@ const Home: FC = () => {
       templateColumns="repeat(5, 1fr)"
     >
       <GridItem colSpan={1} h="100%" bg="white">
-        <List border={"1px solid black"}>
+      <List border={"1px solid black"} height="100vh">
           <ListItem
             borderBottom={"1px solid black"}
             color="rgba(0, 0, 0, 0.5)"
@@ -109,13 +115,212 @@ const Home: FC = () => {
           ))}
         </List>
       </GridItem>
-      <GridItem colSpan={3} bg="papayawhip" />
+      <GridItem colSpan={3}>
+        <Box w="100%" pl="6" pr="6" pt={10} color="black">
+          <Box>
+            <Text fontWeight={"700"} fontSize="25">DOGE</Text>
+            <Flex gap="2">
+              <Button
+                w="90px"
+                p="5"
+                textAlign={"center"}
+                bg="black"
+                borderRadius={"none"}
+              >
+                <Flex color={"white"}>
+                  <AddIcon />
+                  <Text ml="3">Write</Text>
+                </Flex>
+              </Button>
+              <Spacer />
+              <ButtonGroup gap="1" color="white">
+                <Button
+                  w="50px"
+                  p="5"
+                  textAlign={"center"}
+                  bg="black"
+                  borderRadius={"none"}
+                >
+                  <Text>All</Text>
+                </Button>
+                <Button
+                  w="90px"
+                  p="5"
+                  textAlign={"center"}
+                  bg="white"
+                  border="1px solid black"
+                  borderRadius={"none"}
+                >
+                  <Text color="black">Popular</Text>
+                </Button>
+                <Button
+                  w="90px"
+                  p="5"
+                  textAlign={"center"}
+                  bg="white"
+                  borderRadius={"none"}
+                  border="1px solid black"
+                >
+                  <Text color="black">Trending</Text>
+                </Button>
+                <Button
+                  w="90px"
+                  p="5"
+                  textAlign={"center"}
+                  bg="white"
+                  borderRadius={"none"}
+                  border="1px solid black"
+                >
+                  <Text color="black">Favorites</Text>
+                </Button>
+              </ButtonGroup>
+            </Flex>
+          </Box>
+          <Box mt="5">
+            <Box
+              borderRadius={"none"}
+              border="1px solid black"
+              color="black"
+              mb="5"
+            >
+              <Box>
+                <Flex p="3" alignItems="center">
+                  <Badge colorScheme="green" p="1" h="25px">
+                    <Flex textAlign={"center"} alignItems="center">
+                      <ChevronUpIcon color={"black"} />
+                      <Text ml="1">123</Text>
+                    </Flex>
+                  </Badge>
+                  <Box ml="10">
+                    <Flex alignItems={"center"}>
+                      <Avatar size="sm" src={Ellipse_Item} />
+                      <Text ml="2" fontWeight="bold">
+                        0xbb23s..v
+                      </Text>
+                    </Flex>
+                  </Box>
+                </Flex>
+              </Box>
+              <Box>
+                <Flex p="3" alignItems="center">
+                  <Badge colorScheme="red" p="1" h="25px">
+                    <Flex textAlign={"center"} alignItems="center">
+                      <ChevronDownIcon color={"black"} />
+                      <Text ml="1">123</Text>
+                    </Flex>
+                  </Badge>
+                  <Box ml="10">
+                    <Flex alignItems={"center"}>
+                      <Text ml="2" fontWeight="bold">
+                        what you guys think about doge coin?
+                      </Text>
+                    </Flex>
+                  </Box>
+                </Flex>
+              </Box>
+            </Box>
+            <Box
+              borderRadius={"none"}
+              border="1px solid black"
+              color="black"
+              mb="5"
+            >
+              <Box>
+                <Flex p="3" alignItems="center">
+                  <Badge colorScheme="green" p="1" h="25px">
+                    <Flex textAlign={"center"} alignItems="center">
+                      <ChevronUpIcon color={"black"} />
+                      <Text ml="1">123</Text>
+                    </Flex>
+                  </Badge>
+                  <Box ml="10">
+                    <Flex alignItems={"center"}>
+                      <Avatar size="sm" src={Ellipse_Item} />
+                      <Text ml="2" fontWeight="bold">
+                        0xbb23s..v
+                      </Text>
+                    </Flex>
+                  </Box>
+                </Flex>
+              </Box>
+              <Box>
+                <Flex p="3" alignItems="center">
+                  <Badge colorScheme="red" p="1" h="25px">
+                    <Flex textAlign={"center"} alignItems="center">
+                      <ChevronDownIcon color={"black"} />
+                      <Text ml="1">123</Text>
+                    </Flex>
+                  </Badge>
+                  <Box ml="10">
+                    <Flex alignItems={"center"}>
+                      <Text ml="2" fontWeight="bold">
+                        what you guys think about doge coin? what you guys think
+                        about doge coin? what you guys think about doge coin?
+                        what you guys think about doge coin? what you guys think
+                        about doge coin? what you guys think about doge coin?
+                        what you guys think about doge coin? what you guys think
+                        about doge coin? what you guys think about doge coin?
+                        what you guys think about doge coin? what you guys think
+                        about doge coin? what you guys think about doge coin?
+                      </Text>
+                    </Flex>
+                  </Box>
+                </Flex>
+              </Box>
+            </Box>
+          </Box>
+          <Box mt="5">
+            <Box
+              borderRadius={"none"}
+              border="1px solid black"
+              color="black"
+              mb="5"
+            >
+              <Box>
+                <Flex p="3" alignItems="center">
+                  <Badge colorScheme="green" p="1" h="25px">
+                    <Flex textAlign={"center"} alignItems="center">
+                      <ChevronUpIcon color={"black"} />
+                      <Text ml="1">123</Text>
+                    </Flex>
+                  </Badge>
+                  <Box ml="10">
+                    <Flex alignItems={"center"}>
+                      <Avatar size="sm" src={Ellipse_Item} />
+                      <Text ml="2" fontWeight="bold">
+                        0xbb23s..v
+                      </Text>
+                    </Flex>
+                  </Box>
+                </Flex>
+              </Box>
+              <Box>
+                <Flex p="3" alignItems="center">
+                  <Badge colorScheme="red" p="1" h="25px">
+                    <Flex textAlign={"center"} alignItems="center">
+                      <ChevronDownIcon color={"black"} />
+                      <Text ml="1">123</Text>
+                    </Flex>
+                  </Badge>
+                  <Box ml="10">
+                    <Flex alignItems={"center"}>
+                      <Text ml="2" fontWeight="bold">
+                        what you guys think about doge coin?
+                      </Text>
+                    </Flex>
+                  </Box>
+                </Flex>
+              </Box>
+            </Box>          
+          </Box>
+        </Box>
+      </GridItem>
       <GridItem colSpan={1}>
-        <List border={"1px solid black"}>
+        <List border={"1px solid black"} height="100vh">
           <ListItem
             borderBottom={"1px solid black"}
             color="rgba(0, 0, 0, 0.5)"
-            fontWeight={700}
+            fontWeight={700}            
           >
             <Flex alignItems={"center"}>
               <Text ml="4" m="3">
@@ -126,14 +331,14 @@ const Home: FC = () => {
           {[
             { shortName: "Elon Musk", fullName: "Bitcoin", src: BTC },
             { shortName: "SHIBA INU", fullName: "Ethereum", src: BTC },
-            { shortName: "KINU", fullName: "Polygon", src: BTC },            
+            { shortName: "KINU", fullName: "Polygon", src: BTC },
           ].map((item: any, index) => (
             <ListItem borderBottom={"1px solid black"} cursor="pointer">
               <Flex alignItems={"center"} ml="4" m="3">
                 <Avatar size="sm" src={item.src} />
                 <Text ml="2" fontWeight="bold">
                   {item.shortName}
-                </Text>                
+                </Text>
               </Flex>
             </ListItem>
           ))}
